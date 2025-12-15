@@ -28,7 +28,7 @@ class LoginPage {
         this.getLoginButton().click();
     }
 
-    // 🔥 LOGIN SONRASI POP-UP BURADA KAPATILIYOR
+    // 🔥 Login sonrası çıkabilecek popup’ı kapatıyoruz
     closePopupIfVisible() {
         cy.get('body').then(($body) => {
             if ($body.find('button[aria-label="Close"]').length > 0) {
@@ -37,12 +37,12 @@ class LoginPage {
         });
     }
 
-    // POP kullanılabilir login fonksiyonu
+    // POP login fonksiyonu
     login(email, password) {
         this.typeEmail(email);
         this.typePassword(password);
         this.clickLoginButton();
-        this.closePopupIfVisible();   // 🔥 EKLENDİ
+        this.closePopupIfVisible();
     }
 }
 
