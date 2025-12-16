@@ -20,7 +20,7 @@ jobs:
       - name: Echo user login
         run: echo "Hello, ${{ github.actor }}"
 
-  test: # ikinci job ✅ ARTIK jobs ALTINDA
+test: # ikinci job ✅ ARTIK jobs ALTINDA
     runs-on: ubuntu-latest
     name: Cypress Test Job
     container:
@@ -55,4 +55,3 @@ jobs:
           name: cypress-screenshots
           path: cypress/screenshots/**/*.png
           retention-days: 1
-
